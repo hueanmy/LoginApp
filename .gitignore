@@ -24,7 +24,7 @@ coverage
 .grunt
 
 # Bower dependency directory (https://bower.io/)
-bower_components
+public/bower_components
 
 # node-waf configuration
 .lock-wscript
@@ -56,4 +56,6 @@ typings/
 
 # dotenv environment variables file
 .env
+package-lock.json
+.idea/
 
