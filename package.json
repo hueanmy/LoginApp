@@ -1,0 +1,22 @@
+{
+  "name": "loginapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hueanmy/LoginApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hueanmy/LoginApp/issues"
+  },
+  "homepage": "https://github.com/hueanmy/LoginApp#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
