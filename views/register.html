@@ -1,18 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+{% set title='Register' %}
+{% extends '_layout.html' %}
 
-</head>
-<body>
+{% block content %}
 <div class="container">
     <div class="row centered-form">
+        <div class="col-sm-6 col-md-4">
+            <img src="" alt="" class="img-rounded img-responsive" />
+        </div>
         <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -55,12 +49,10 @@
                         </div>
 
                         <input type="submit" value="Register" class="btn btn-info btn-block">
-
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-</body>
-</html>
+{% endblock %}
