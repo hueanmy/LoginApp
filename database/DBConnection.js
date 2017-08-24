@@ -1,8 +1,7 @@
-const mysql = require('mysql');
-const config = require('../config');
+const mysql 	= require('mysql');
+const config 	= require('../config');
 
 let mysqlDbConfig = config.mysqlDbConfig;
-let mysqlConnection = mysql.createConnection(mysqlDbConfig);
-mysqlConnection.connect();
+let mysqlConnection = mysql.createPool(mysqlDbConfig);
 
 module.exports = mysqlConnection;

@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const nunjucks = require('nunjucks');
 const router = require('./app/http/router/router');
+const path = require('path');
 
 let app = express();
 
