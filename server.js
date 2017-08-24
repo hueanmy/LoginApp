@@ -17,6 +17,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //passportjs
+
+//nunjucks
 nunjucks.configure('./views', {
     autoescape: true,
     express: app

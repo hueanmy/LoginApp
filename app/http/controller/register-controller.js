@@ -1,9 +1,18 @@
+const Profile = require('../../profile/profile');
+const Credential = require('../../credential/credential');
+
 function getRegister(req, res, next) {
     res.render('register.html');
 }
 
 function postRegister(req, res, next) {
 
+    req.credential.create().then((result) => {
+        req.profile.setCredentialId(result.insertId);
+        req.profile.create().then(() => {
+            res.redirect('/login');
+        });
+    });
 }
 
 exports.getRegister = getRegister;

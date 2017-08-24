@@ -1,3 +1,6 @@
+const Credential = require('../../credential/credential');
+const Profile = require('../../profile/profile');
+
 module.exports = function(req, res, next) {
     let fullname = req.body.fullname;
     let username = req.body.username;
@@ -7,5 +10,18 @@ module.exports = function(req, res, next) {
     let address = req.body.address;
     let avatar = req.body.avatar;
 
-    req.checkBody('password2', 'Password is not match').equal(req.body.password);
+    req.assert('password2', 'Password is not match').equals(req.body.password);
+
+    req.getValidationResult().then((result) => {
+        let errors = result.array();
+        if(!result.isEmpty()) {
+            res.render('register.html', {
+                errors: errors
+            });
+        } else {
+            req.credential = new Credential(username, password, null, null);
+            req.profile = new Profile(username, fullname, email, address, avatar);
+            next();
+        }
+    })
 };
