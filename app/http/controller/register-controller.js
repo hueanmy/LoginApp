@@ -1,6 +1,3 @@
-const Profile = require('../../profile/profile');
-const Credential = require('../../credential/credential');
-
 function getRegister(req, res, next) {
     res.render('register.html');
 }

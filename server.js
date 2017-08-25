@@ -2,7 +2,10 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
+const session           = require('express-session');
 const passport = require('passport');
+const flash             = require('connect-flash');
+const cookieParser      = require('cookie-parser');
 const nunjucks = require('nunjucks');
 const router = require('./app/http/router/router');
 const path = require('path');
@@ -15,15 +18,25 @@ app.use('/static', express.static(path.join(__dirname, 'public')));
 //body-parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(flash());
+app.use(cookieParser());
 
 //passportjs
-
+app.use(passport.initialize());
+app.use(passport.session());
+require('./app/http/passport/config')(passport);
 //nunjucks
 nunjucks.configure('./views', {
     autoescape: true,
     express: app
 } ) ;
 
+//express session
+app.use(session({
+    secret: 'secret',
+    saveUninitialized: true,
+    resave: true
+}));
 //express-validator
 app.use(expressValidator({
     errorFormatter: function(param, msg, value) {
