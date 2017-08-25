@@ -1,4 +1,4 @@
-const mysqlConnection = require('../database/DBConnection');
+const mysqlConnection = require('../../database/DBConnection');
 
 class Credential {
 

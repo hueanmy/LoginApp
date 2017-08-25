@@ -38,7 +38,7 @@ class Profile {
         let query = "update profile set fullname=?, email=?, address=?, avatar=? where credentialId=?";
 
         return new Promise((resolve, reject) => {
-            mysqlConnection.query(query, [this.fullname, this.email, this.address, this.avatar, this.credentialId], (err, result) => {
+            this.mysqlConnection.query(query, [this.fullname, this.email, this.address, this.avatar, this.credentialId], (err, result) => {
                 if (err) {
                     reject(err);
                 } else {
@@ -48,38 +48,6 @@ class Profile {
         });  
     }
 
-    static findByCredentialId(id) {
-        let query = 'SELECT * FROM profile WHERE credentialId = ?';
-
-        return new Promise((resolve, reject) => {
-            mysqlConnection.query(query, [id], (error, result) => {
-                if(error) {
-                    reject(error);
-                }
-                else {
-                    if(result.length) {
-                        resolve(result[0]);
-                    }
-                    else {
-                        resolve(null);
-                    }
-                }
-            })
-        })
-    }
-
-    static findByCondition(condition) {
-        return new Promise((resolve, reject) => {
-            mysqlConnection.query(condition.getSQL(), condition.getParameter(), (error, result) => {
-                if(error) {
-                    reject(error);
-                }
-                else {
-                    resolve(result);
-                }
-            })
-        })
-    }
 }
 
 module.exports = Profile;
