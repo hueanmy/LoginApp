@@ -5,7 +5,7 @@ const RegisterValidator = require('../middleware/register-validator');
 const LoginController = require('../controller/login-controller');
 const ProfileController = require('../controller/profile-controller');
 const passport = require('passport');
-// const profileRouter = require('./profile-router');
+const profileRouter = require('./profile-router');
 let router = express.Router();
 
 router.use('/profile', profileRouter);

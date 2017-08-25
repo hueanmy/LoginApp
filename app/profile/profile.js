@@ -38,11 +38,30 @@ class Profile {
         let query = "update profile set fullname=?, email=?, address=?, avatar=? where credentialId=?";
 
         return new Promise((resolve, reject) => {
-            this.mysqlConnection.query(query, [this.fullname, this.email, this.address, this.avatar, this.credentialId], (err, result) => {
+            mysqlConnection.query(query, [this.fullname, this.email, this.address, this.avatar, this.credentialId], (err, result) => {
                 if (err) {
                     reject(err);
                 } else {
                     resolve(profile);
+                }
+            });
+        });  
+    }
+
+    static findByCredentialId(id) {
+        let query = "select * from profile where credentialId=?";
+
+        return new Promise((resolve, reject) => {
+            mysqlConnection.query(query, [id], (err, result) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    if (result.length) {
+                        resolve(result[0]);
+                    }
+                    else {
+                        resolve(null);
+                    }                    
                 }
             });
         });  

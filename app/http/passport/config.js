@@ -1,6 +1,7 @@
 const local = require('./provider/local');
 const facebook = require('./provider/facebook');
 const DBConnection 	= require('../../../database/DBConnection');
+
 module.exports = function(passport) {
     passport.serializeUser(function(user, done) {
         done(null, user.id);
@@ -11,6 +12,7 @@ module.exports = function(passport) {
             done(err, result[0]);
         });
     });
+    
     passport.use(local);
     passport.use(facebook);
 };

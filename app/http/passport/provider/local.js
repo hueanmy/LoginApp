@@ -11,7 +11,7 @@ module.exports = new LocalStrategy(
                 return done(null, false, { message: 'Incorrect username.' });
             }
 
-            if(password !== result[0].password) {
+            if (password !== result[0].password) {
                 return done(null, false, { message: 'Incorrect password.' });
             }
             return done(null, result[0]);

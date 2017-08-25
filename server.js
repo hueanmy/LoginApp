@@ -21,10 +21,6 @@ app.use(bodyParser.json());
 app.use(flash());
 app.use(cookieParser());
 
-//passportjs
-app.use(passport.initialize());
-app.use(passport.session());
-require('./app/http/passport/config')(passport);
 //nunjucks
 nunjucks.configure('./views', {
     autoescape: true,
@@ -37,6 +33,12 @@ app.use(session({
     saveUninitialized: true,
     resave: true
 }));
+
+//passportjs
+app.use(passport.initialize());
+app.use(passport.session());
+require('./app/http/passport/config')(passport);
+
 //express-validator
 app.use(expressValidator({
     errorFormatter: function(param, msg, value) {
@@ -55,8 +57,16 @@ app.use(expressValidator({
     }
 }));
 
-app.use(router);
+//Global Variable
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
+    res.locals.user = req.user || null;
+    next();
+});
 
+app.use(router);
 
 app.listen(8000, () => {
    console.log('server at port 8000');
