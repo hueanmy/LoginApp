@@ -13,16 +13,16 @@
             <div class="well well-sm">
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
-                        <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                        <img src="{{ profile.avatar }}" alt="" class="img img-rounded img-responsive" />
                     </div>
                     <div class="col-sm-6 col-md-8">
-                        <h4>Le Thi Mai</h4>
-                        <small><cite title="">Thanh Hoa<i class="glyphicon glyphicon-map-marker">
+                        <h4>{{ profile.fullname }}</h4>
+                        <small><cite title="">{{ profile.address }}<i class="glyphicon glyphicon-map-marker">
                         </i></cite></small>
                         <p>
-                            <i class="glyphicon glyphicon-envelope"></i>email@example.com
+                            <i class="glyphicon glyphicon-envelope"></i>{{ profile.email }}
                             <br />
-                            <i class="username">maile</i>
+                            <i class="username">{{ profile.username }}</i>
                             <br />
                         </p>
                         <button class="btn-change">Change Profile</button>

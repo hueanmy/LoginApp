@@ -9,7 +9,7 @@ const path = require('path');
 let app = express();
 
 //set static file
-app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
 
 //body-parser
 app.use(bodyParser.urlencoded({ extended: false }));

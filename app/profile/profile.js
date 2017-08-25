@@ -68,6 +68,18 @@ class Profile {
         })
     }
 
+    static findByCondition(condition) {
+        return new Promise((resolve, reject) => {
+            mysqlConnection.query(condition.getSQL(), condition.getParameter(), (error, result) => {
+                if(error) {
+                    reject(error);
+                }
+                else {
+                    resolve(result);
+                }
+            })
+        })
+    }
 }
 
 module.exports = Profile;

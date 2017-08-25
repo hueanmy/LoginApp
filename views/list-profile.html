@@ -1,0 +1,59 @@
+{% set title='List Profile' %}
+{% extends '_layout.html' %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-8"></div>
+	<div class="col-md-4">
+		<div class="input-group" >
+			<div class="input-group-btn">
+		        <select class="btn searchSelect">
+					<option value="username"
+					{% if (key == 'username') %}
+						selected 
+					{% endif %}
+					>Username</option>
+					<option value="fullname"
+					{% if (key == 'fullname') %}
+						selected 
+					{% endif %}
+					>Full Name</option>
+		        </select>          	
+	      	</div>
+			
+			<input type="text" class="form-control searchInput" placeholder="Search..." value="{{value}}">
+			<span class="input-group-btn">
+				<button class="btn btn-default searchButton" type="button">
+					<i class="fa fa-search"></i>
+				</button>
+			</span>
+		</div>
+	</div>
+</div>
+
+<table class="table table-striped table-hover">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Username</th>
+			<th>Fullname</th>
+			<th>Email</th>
+			<th>Address</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+	{% for profile in profiles %}
+		<tr>
+			<td>{{ profile.id }}</td>
+			<td>{{ profile.username }}</td>
+			<td>{{ profile.fullname }}</td>
+			<td>{{ profile.email }}</td>
+			<td>{{ profile.address }}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+
+</table>
+
+{% endblock %}
