@@ -6,16 +6,16 @@
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body style="background: ">
 <div class="container container-fluid">
     {% for err in errors %}
     <div class='alert alert-danger'>{{ err.msg }}</div>
     {% endfor %}
 
     {% if (success_msg != "") %}
-    <div class='alert alert-success'>{{ success_msg }}</div>
+    <!--<div class='alert alert-success'>{{ success_msg }}</div>-->
     {% elif (error_msg != "") %}
     <div class='alert alert-danger'>{{ error_msg }}</div>
     {% elif (error != "") %}
