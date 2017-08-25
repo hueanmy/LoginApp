@@ -19,3 +19,17 @@ body {
 .logout {
     padding-right: 30px;
 }
+
+small {
+    display: block;
+    line-height: 1.428571429;
+    color: #999;
+}
+
+.logout-text {
+    color: white;
+}
+
+.login {
+    margin-top: 10px;
+}
