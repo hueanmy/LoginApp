@@ -10,6 +10,8 @@ function getProfile (req, res, next) {
 
 function updateProfile (req, res, next) {
 	
+
 }
 
 exports.getProfile = getProfile;
+exports.updateProfile = updateProfile;
