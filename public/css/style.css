@@ -15,3 +15,7 @@ body {
 .omb_authTitle {
     color: white;
 }
+
+.logout {
+    padding-right: 30px;
+}
