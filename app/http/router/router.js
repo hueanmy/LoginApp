@@ -8,7 +8,6 @@ const passport = require('passport');
 let router = express.Router();
 
 router.get('/register', registerController.getRegister);
-router.post('/register', registerController.postRegister);
 router.post('/register',UserExisted, RegisterValidator, registerController.postRegister);
 
 router.get('/login', LoginController.getLogin);

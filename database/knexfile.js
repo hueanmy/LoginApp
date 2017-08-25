@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({path: '../.env'});
 module.exports = {
 
     dev: {
@@ -10,5 +10,4 @@ module.exports = {
             database: process.env.DB_NAME
         }
     }
-
 };
