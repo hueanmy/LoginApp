@@ -1,6 +1,6 @@
 const local = require('./provider/local');
 const facebook = require('./provider/facebook');
-const DBConnection 	= require('../../../database/DBConnection');
+const DBConnection 	= require('../../database/DBConnection');
 
 module.exports = function(passport) {
     passport.serializeUser(function(user, done) {

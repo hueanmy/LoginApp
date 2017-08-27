@@ -37,7 +37,7 @@ app.use(session({
 //passportjs
 app.use(passport.initialize());
 app.use(passport.session());
-require('./app/http/passport/config')(passport);
+require('./app/passport/config')(passport);
 
 //express-validator
 app.use(expressValidator({
