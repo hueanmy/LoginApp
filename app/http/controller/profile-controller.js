@@ -25,10 +25,17 @@ function getEditProfile(req, res, next) {
 		.catch(next);
 }
 
+function getEditPassword(req, res, next) {
+	Profile.findByCredentialId(req.user.id)
+		.then((profile) => {
+			res.render('changePassword.html');
+		})
+		.catch(next);
+}
+
 function getProfiles(req, res, next) {
 	Profile.findByCondition(req.condition)
 		.then((profiles) => {
-			console.log(profiles);
 			res.render('list-profile.html', {
 				profiles: profiles,
 				key: req.key,
@@ -42,3 +49,4 @@ exports.getProfile = getProfile;
 exports.updateProfile = updateProfile;
 exports.getEditProfile = getEditProfile;
 exports.getProfiles = getProfiles;
+exports.getEditPassword = getEditPassword;

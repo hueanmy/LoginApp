@@ -14,8 +14,6 @@ module.exports = function(req, res, next) {
 		req.key = 'fullname';
 		req.value = req.query.fullname;
 		condition = new GetProfileByFullnameCondition(req.query.fullname);
-		console.log(condition.getSQL());
-		console.log(condition.getParameter());
 	}
 
 	req.condition = condition;

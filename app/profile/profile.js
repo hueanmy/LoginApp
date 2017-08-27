@@ -42,7 +42,7 @@ class Profile {
                 if (err) {
                     reject(err);
                 } else {
-                    resolve(profile);
+                    resolve(result);
                 }
             });
         });  
@@ -67,6 +67,17 @@ class Profile {
         });  
     }
 
+    static findByCondition(condition) {
+        return new Promise((resolve, reject) => {
+            mysqlConnection.query(condition.getSQL(), condition.getParameter(), (err, result) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(result);
+                }
+            });
+        });  
+    }
 }
 
 module.exports = Profile;

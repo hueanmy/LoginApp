@@ -2,6 +2,7 @@ const express = require('express');
 const RegisterController = require('../controller/register-controller');
 const UserExisted = require('../middleware/user-existed');
 const RegisterValidator = require('../middleware/register-validator');
+const ensureUnauthenticate = require('../middleware/ensure-unauthenticate');
 const LoginController = require('../controller/login-controller');
 const ProfileController = require('../controller/profile-controller');
 const passport = require('passport');
@@ -10,10 +11,10 @@ let router = express.Router();
 
 router.use('/profile', profileRouter);
 
-router.get('/register', RegisterController.getRegister);
-router.post('/register',UserExisted, RegisterValidator, RegisterController.postRegister);
+router.get('/register', ensureUnauthenticate, RegisterController.getRegister);
+router.post('/register', UserExisted, RegisterValidator, RegisterController.postRegister);
 
-router.get('/login', LoginController.getLogin);
+router.get('/login', ensureUnauthenticate, LoginController.getLogin);
 router.post('/login',
     passport.authenticate('local', {
         successRedirect: '/profile',
