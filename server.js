@@ -1,14 +1,14 @@
 require('dotenv').config();
-const express = require('express');
-const bodyParser = require('body-parser');
-const expressValidator = require('express-validator');
+const express           = require('express');
+const bodyParser        = require('body-parser');
+const expressValidator  = require('express-validator');
 const session           = require('express-session');
-const passport = require('passport');
+const passport          = require('passport');
 const flash             = require('connect-flash');
 const cookieParser      = require('cookie-parser');
-const nunjucks = require('nunjucks');
-const router = require('./app/http/router/router');
-const path = require('path');
+const nunjucks          = require('nunjucks');
+const router            = require('./app/http/router/router');
+const path              = require('path');
 
 let app = express();
 

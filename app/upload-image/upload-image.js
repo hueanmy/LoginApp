@@ -1,5 +1,5 @@
 let express = require('express');
-let multer = require('multer');
+let multer  = require('multer');
 
 let storage = multer.diskStorage({
     destination: function (req, file, cb) {

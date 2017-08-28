@@ -1,8 +1,8 @@
 const TwitterStrategy = require('passport-twitter').Strategy;
-const Credential = require('../../credential/credential');
-const Profile = require('../../profile/profile');
-const DBConnection = require ('../../../database/DBConnection');
-const config = require('../../../config');
+const Credential      = require('../../credential/credential');
+const Profile         = require('../../profile/profile');
+const DBConnection    = require ('../../../database/DBConnection');
+const config          = require('../../../config');
 module.exports = new TwitterStrategy(config.twitterAuth,
     function(token, tokenSecret, profile, done ){
         let query = 'SELECT * FROM credential WHERE provider= ? and providerId = ?';

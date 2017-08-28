@@ -1,8 +1,8 @@
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-const Credential = require('../../credential/credential');
-const Profile = require('../../profile/profile');
-const DBConnection = require ('../../../database/DBConnection');
-const config = require('../../../config');
+const Credential     = require('../../credential/credential');
+const Profile        = require('../../profile/profile');
+const DBConnection   = require ('../../../database/DBConnection');
+const config         = require('../../../config');
 
 module.exports = new GoogleStrategy(config.googleAuth,
     function(token, tokenSecret, profile, done) {
