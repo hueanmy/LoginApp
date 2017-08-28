@@ -7,6 +7,8 @@ const LoginController = require('../controller/login-controller');
 const ProfileController = require('../controller/profile-controller');
 const passport = require('passport');
 const profileRouter = require('./profile-router');
+const UploadImage = require('../../upload-image/upload-image');
+const path = require('path');
 let router = express.Router();
 
 router.use('/profile', profileRouter);
@@ -34,6 +36,13 @@ router.get('/logout', (req, res, next) => {
 	req.logout();
 	req.flash('success_msg', 'You are logged out');
 	res.redirect('/login');
-})
+});
+
+router.post('/upload', UploadImage);
+
+router.get('/image/:filename', (req, res, next) => {
+    res.setHeader('Content-Type', 'image/jpg');
+    res.status(200).sendFile(path.resolve(`./uploads/${req.params.filename}`));
+});
 
 module.exports = router;
