@@ -16,6 +16,38 @@ body {
     color: white;
 }
 
+.facebook {
+    padding-left: 0px !important;
+}
+
+.social {
+    padding-left: 0px !important;
+}
+
+.form-group {
+    margin-bottom: 10px !important;
+}
+
+.text {
+    color: #ffffff;
+}
+
+.glyphicon-envelope {
+    padding-right: 10px !important;
+}
+
+.social-google {
+    color: #DD4B39;
+}
+
+.social-facebook {
+    color: #3B5998;
+}
+
+.social-twitter {
+    color: #1c94e0;
+}
+
 .logout {
     padding-right: 30px;
 }
