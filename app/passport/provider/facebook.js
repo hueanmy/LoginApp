@@ -1,8 +1,8 @@
 const FacebookStrategy = require('passport-facebook').Strategy;
-const Credential = require('../../credential/credential');
-const Profile = require('../../profile/profile');
-const DBConnection = require ('../../../database/DBConnection');
-const config = require('../../../config');
+const Credential       = require('../../credential/credential');
+const Profile          = require('../../profile/profile');
+const DBConnection     = require ('../../../database/DBConnection');
+const config           = require('../../../config');
 
 module.exports = new FacebookStrategy(config.facebookAuth,
     function(accessToken, refreshToken, profile, done){

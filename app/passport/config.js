@@ -1,6 +1,7 @@
-const local = require('./provider/local');
-const facebook = require('./provider/facebook');
-const google = require('./provider/google');
+const local         = require('./provider/local');
+const facebook      = require('./provider/facebook');
+const google        = require('./provider/google');
+const twitter       = require('./provider/twitter');
 const DBConnection 	= require('../../database/DBConnection');
 
 module.exports = function(passport) {
@@ -17,4 +18,5 @@ module.exports = function(passport) {
     passport.use(local);
     passport.use(facebook);
     passport.use(google);
+    passport.use(twitter);
 };

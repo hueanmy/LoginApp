@@ -1,4 +1,4 @@
-const DBConnection 	= require('../../../database/DBConnection');
+const DBConnection 	    = require('../../../database/DBConnection');
 const LocalStrategy 	= require('passport-local').Strategy;
 
 module.exports = new LocalStrategy(

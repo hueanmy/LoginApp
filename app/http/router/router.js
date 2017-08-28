@@ -1,15 +1,14 @@
-const express = require('express');
-const RegisterController = require('../controller/register-controller');
-const UserExisted = require('../middleware/user-existed');
-const RegisterValidator = require('../middleware/register-validator');
+const express              = require('express');
+const RegisterController   = require('../controller/register-controller');
+const UserExisted          = require('../middleware/user-existed');
+const RegisterValidator    = require('../middleware/register-validator');
 const ensureUnauthenticate = require('../middleware/ensure-unauthenticate');
-const LoginController = require('../controller/login-controller');
-const ProfileController = require('../controller/profile-controller');
-const passport = require('passport');
-const profileRouter = require('./profile-router');
-const UploadImage = require('../../upload-image/upload-image');
-const path = require('path');
-let router = express.Router();
+const LoginController      = require('../controller/login-controller');
+const passport             = require('passport');
+const profileRouter        = require('./profile-router');
+const UploadImage          = require('../../upload-image/upload-image');
+const path                 = require('path');
+let router                 = express.Router();
 
 router.use('/profile', profileRouter);
 
@@ -35,6 +34,11 @@ router.get('/auth/facebook/callback',
 router.get('/auth/google', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email'] }));
 router.get('/auth/google/callback',
     passport.authenticate('google', { failureRedirect: '/login', successRedirect: '/profile' }));
+//twitter
+router.get('/auth/twitter', passport.authenticate('twitter'));
+router.get('/auth/twitter/callback',
+    passport.authenticate('twitter', { successRedirect: '/profile',
+        failureRedirect: '/login' }));
 
 router.get('/logout', (req, res, next) => {
 	req.logout();
