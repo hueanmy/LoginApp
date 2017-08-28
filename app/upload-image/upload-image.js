@@ -13,14 +13,12 @@ let storage = multer.diskStorage({
 let upload = multer({ storage: storage }).single('avatar');
 
 module.exports = function (req, res, next) {
-    console.log(req.file);
     upload(req, res, function (err) {
         if (err) {
             // An error occurred when uploading
             next(err);
         }
         if (req.file){
-            console.log(req.file);
             res.json({
                 status: 'success',
                 link: `http://localhost:8000/image/${req.file.filename}`
