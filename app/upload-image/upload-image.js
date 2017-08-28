@@ -15,7 +15,6 @@ let upload = multer({ storage: storage }).single('avatar');
 module.exports = function (req, res, next) {
     upload(req, res, function (err) {
         if (err) {
-            // An error occurred when uploading
             next(err);
         }
         if (req.file){
@@ -29,8 +28,6 @@ module.exports = function (req, res, next) {
                 status: 'fail'
             });
         }
-
-        // Everything went fine
     })
 };
 
