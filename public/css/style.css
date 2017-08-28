@@ -28,6 +28,14 @@ body {
     margin-bottom: 10px !important;
 }
 
+.text {
+    color: #ffffff;
+}
+
+.glyphicon-envelope {
+    padding-right: 10px !important;
+}
+
 .social-google {
     color: #DD4B39;
 }
