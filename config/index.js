@@ -11,5 +11,10 @@ module.exports = {
         'clientSecret' : '1bb6c53090117d00eebff9733823b005',
         'callbackURL'   : 'http://localhost:8000/auth/facebook/callback',
         'profileFields': ['id', 'displayName', 'photos', 'emails']
+    },
+    'googleAuth' : {
+        'clientID': '96870945709-56lk906511ia6cqvpo41gph1i8r8ghod.apps.googleusercontent.com',
+        'clientSecret': 'Izh94jU92SyMTRkYQViiUDMW',
+        'callbackURL': "http://localhost:8000/auth/google/callback"
     }
 };

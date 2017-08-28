@@ -31,6 +31,10 @@ router.get('/auth/facebook/callback',
         successRedirect: '/profile',
         failureRedirect: '/login'
     }));
+//google
+router.get('/auth/google', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email'] }));
+router.get('/auth/google/callback',
+    passport.authenticate('google', { failureRedirect: '/login', successRedirect: '/profile' }));
 
 router.get('/logout', (req, res, next) => {
 	req.logout();
