@@ -104,3 +104,30 @@ button.btn.btn-login {
   padding: 0 !important;
 }
 
+/*register form*/
+
+.panel-heading {
+  background-color: #009688 !important;
+}
+
+.register-form {
+    margin-top: 15vh;
+    background:#ffffff;
+    border-radius: 5px;
+}
+
+.req {
+  color: red;
+}
+
+input.btn.btn-register {
+  background-color: #009688;
+  border-radius: 0.5em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.text-signup {
+  text-align: center;
+  font-weight: bold;
+}

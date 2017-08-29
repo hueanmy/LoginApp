@@ -3,48 +3,78 @@
 
 {% block content %}
 <div class="container">
-    <div class="row centered-form">
-        <div class="col-sm-6 col-md-4 col-md-push-5">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Please sign up</h3>
-                </div>
-                <div class="panel-body">
-                    <form role="form" action="/register" method="post">
-                        <div class="form-group">
-                            <input type="text" name="fullname" id="first_name" class="form-control input-sm" placeholder="Full Name">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" name="username" id="username" class="form-control input-sm" placeholder="Username">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="Address" name="address" id="address" class="form-control input-sm" placeholder="Address">
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <input type="password" name="password2" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
-                                </div>
-                            </div>
-                        </div>
-
-                        <input type="submit" value="Register" class="btn btn-primary btn-block">
-                    </form>
-                </div>
-            </div>
+  <div class="row centered-form">
+    <div class="col-md-6 col-md-offset-3 register-form">
+      <h1 class="text-login">Welcome!</h1>
+      <h4 class="text-signup">Please sign up</h4>
+      <form role="form" action="/register" method="post" class="col-md-10 col-md-offset-1">
+        <div class="form-group label-floating">
+          <label class="control-label">FullName
+            <span class="req" style="color: red;">*</span>
+          </label>
+          <div class="input-group custom-input">
+            <input type="text" name="fullname" id="first_name" class="form-control input-sm">
+          </div>
         </div>
+
+        <div class="form-group label-floating">
+          <label class="control-label">UserName
+            <span class="req" style="color: red;">*</span>
+          </label>
+          <div class="input-group custom-input">
+            <input type="text" name="username" id="user_name" class="form-control input-sm">
+          </div>
+        </div>
+
+        <div class="form-group label-floating">
+          <label class="control-label">Email
+            <span class="req" style="color: red;">*</span>
+          </label>
+          <div class="input-group custom-input">
+            <input type="email" name="email" id="email" class="form-control input-sm">
+          </div>
+        </div>
+
+        <div class="form-group label-floating">
+          <label class="control-label">Address
+            <span class="req" style="color: red;">*</span>
+          </label>
+          <div class="input-group custom-input">
+            <input type="text" name="address" id="address" class="form-control input-sm">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group label-floating">
+              <label class="control-label">Password
+                <span class="req" style="color: red;">*</span>
+              </label>
+              <div class="input-group custom-input">
+                <input type="password" name="password" id="password" class="form-control input-sm">
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group label-floating">
+              <label class="control-label">Confirm Password
+                <span class="req" style="color: red;">*</span>
+              </label>
+              <div class="input-group custom-input">
+                <input type="password" name="password2" id="password_confirmation" class="form-control input-sm">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-md-push-4">
+            <input type="submit" value="Register" class="btn btn-register">
+          </div>
+        </div>
+
+      </form>
     </div>
+  </div>
 </div>
 {% endblock %}
