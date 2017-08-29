@@ -14,15 +14,11 @@
                         <h3>{{ profile.fullname }}</h3>
                         <p>
                             <i class="fa fa-location-arrow custom-icon "></i>{{ profile.address}}
-                            <br />
-                            <i class="username">{{ profile.username }}</i>
-                            <br />
                         </p>
                         <p>
                             <i class="glyphicon glyphicon-envelope custom-icon"></i>{{ profile.email }}
-                            <br />
-                            <i class="username">{{ profile.username }}</i>
-                            <br />
+                            <br>
+                            <i class="fa fa-user custom-icon username">{{ profile.username }}</i>
                         </p>
                         <a href="/profile/edit"><button class="btn btn-warning">Change Profile</button></a>
                         <!-- <a href="/profile/editPw"><button class="btn-default">Change Password</button></a> -->
