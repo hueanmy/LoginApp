@@ -131,3 +131,38 @@ input.btn.btn-register {
   text-align: center;
   font-weight: bold;
 }
+
+/* style profile */
+
+.custom-profile {
+  margin-top: 20vh;
+}
+
+.custom-avatar {
+  height: 50%;
+  margin-top: 4.5vh;
+}
+
+.custom-icon {
+  padding-right: 10px;
+}
+
+/* style layout */
+
+.custom-nav {
+  background-color: transparent !important;
+}
+
+.logout {
+  margin-right: 25px;
+}
+ /*change profile*/
+
+ .custom-upload {
+    background-color: transparent;
+    color: #ffffff;
+ }
+
+.text {
+  color: #ffffff;
+}

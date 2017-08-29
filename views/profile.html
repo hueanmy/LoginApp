@@ -4,18 +4,22 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-8 col-md-push-3">
+        <div class="col-md-8 col-md-offset-2 custom-profile">
             <div class="well well-sm">
                 <div class="row">
-                    <div class="col-sm-6 col-md-4">
+                    <div class="col-sm-6 col-md-4 custom-avatar">
                         <img src="{{ profile.avatar }}" alt="" class="img img-rounded img-responsive" />
                     </div>
                     <div class="col-sm-6 col-md-8">
-                        <h4>{{ profile.fullname }}</h4>
-                        <small><cite title="">{{ profile.address }}<i class="glyphicon glyphicon-map-marke" width="304" height="236">
-                        </i></cite></small>
+                        <h3>{{ profile.fullname }}</h3>
                         <p>
-                            <i class="glyphicon glyphicon-envelope"></i>{{ profile.email }}
+                            <i class="fa fa-location-arrow custom-icon "></i>{{ profile.address}}
+                            <br />
+                            <i class="username">{{ profile.username }}</i>
+                            <br />
+                        </p>
+                        <p>
+                            <i class="glyphicon glyphicon-envelope custom-icon"></i>{{ profile.email }}
                             <br />
                             <i class="username">{{ profile.username }}</i>
                             <br />

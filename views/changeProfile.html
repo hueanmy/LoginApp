@@ -3,13 +3,13 @@
 
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="row custom-profile col-md-10 col-md-offset-1">
+        <div class="col-md-4 col-sm-6 col-xs-12 custom-avatar">
             <div class="text-center">
                 <img src="{{ profile.avatar }}" class="img img-rounded img-responsive avatar" alt="avatar">
-                <label class='btn btn-default' id='uploadImage' for='inputImage'>
+                <label class="btn custom-upload" id="uploadImage" for="inputImage">
                     Upload new picture
-                    <input type="file" id='inputImage'>
+                    <input type="file" id="inputImage">
                 </label>
             </div>
         </div>
@@ -48,7 +48,7 @@
                 </div>
 
                 <input type="hidden" class="form-control" name='avatar' value="{{ profile.avatar }}">
-                
+
                 <div class="form-group">
                     <label class="col-md-3 control-label"></label>
                     <div class="col-md-8">
