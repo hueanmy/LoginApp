@@ -166,3 +166,39 @@ input.btn.btn-register {
 .text {
   color: #ffffff;
 }
+
+/* change pass */
+
+.change-pass {
+  padding-right: 0;
+}
+
+/* list profile */
+
+.title {
+  text-align: center;
+  color: #ffffff;
+}
+
+select.btn.searchSelect {
+  margin-right: 10px !important;
+}
+
+.table-filter {
+  margin-top: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  border-radius: 0.5em;
+}
+
+tr.custom-list:hover {
+    background-color: #DFF0D8;
+}
+
+input.form-control.searchInput {
+  border-top-right-radius: 1.5em;
+}
+
+thead.custom-thead {
+    background-color: #009688;
+}
