@@ -1,82 +1,106 @@
 body {
-    width:100px;
-    height:100px;
-    background: -webkit-linear-gradient(90deg, #16222A 10%, #3A6073 90%);
-    background: -moz-linear-gradient(90deg, #16222A 10%, #3A6073 90%);
-    background: -ms-linear-gradient(90deg, #16222A 10%, #3A6073 90%);
-    background: -o-linear-gradient(90deg, #16222A 10%, #3A6073 90%);
-    background: linear-gradient(90deg, #16222A 10%, #3A6073 90%);
-    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%), url('https://www.psfk.com/wp-content/uploads/2016/11/Literai_ArtificialFiction_PSFK.com_.jpg') no-repeat fixed center center;
+    background-size: cover;
+    font-family: Montserrat;
 }
 
-.container {
-    margin-top: 60px;
-}
-.omb_authTitle {
-    color: white;
-}
-
-.facebook {
-    padding-left: 0px !important;
+.login-form {
+    margin-top: 20vh;
+    background:#ffffff;
+    border-radius: 5px;
+    border-top: 5px solid #009688;
+    line-height: 1em;
 }
 
-.social {
-    padding-left: 0px !important;
+.col-btn {
+  margin-bottom: 20px;
 }
 
-.form-group {
-    margin-bottom: 10px !important;
-}
-
-.text {
+.text-login {
+    text-align: center;
     color: #ffffff;
 }
 
-.glyphicon-envelope {
-    padding-right: 10px !important;
-}
-
-.social-google {
-    color: #DD4B39;
-}
-
-.social-facebook {
-    color: #3B5998;
-}
-
-.social-twitter {
-    color: #1c94e0;
-}
-
-.logout {
-    padding-right: 30px;
-}
-
-small {
+.custom-input {
     display: block;
-    line-height: 1.428571429;
-    color: #999;
 }
 
-.logout-text {
-    color: white;
+.line {
+  border: 0.5px #BDBDCF dashed;
 }
 
-@media (min-width: 768px) {
-    .omb_login .omb_forgotPwd {
-        text-align: right;
-        margin-top:10px;
-    }
+.tab-group {
+  list-style: none;
 }
 
-.img {
-    width: 100%;
-    height: 100%;
-}
-.login {
-    margin-top: 10px;
+button.btn.btn-register {
+  background-color: #009688;
+  border-radius: 0.5em;
 }
 
-#inputImage {
-    display: none
+button.btn.btn-register:hover {
+  background-color: #00BBAA !important;
 }
+
+button.btn.btn-login:hover{
+  border: 0.15em #009688 solid;
+  background-color: #ffffff !important;
+}
+
+button.btn.btn-login {
+  border-radius: 0.5em;
+}
+
+.text-login {
+  font-weight: bold;
+  color: #009688;
+}
+
+.text-register {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.custom-facebook {
+  font-size: 25px;
+  color: #3B5998;
+}
+
+.custom-twitter:hover {
+  color: #009688;
+}
+
+.custom-facebook:hover {
+  color: #009688;
+}
+
+.custom-google:hover {
+  color: #009688;
+}
+
+.custom-twitter {
+  font-size: 25px;
+  color: #1DA1F2;
+}
+
+.custom-google {
+  font-size: 25px;
+  color: #DF4B37;
+}
+
+.login-social {
+  margin-bottom: 15px;
+  margin-right: 0px;
+  padding-left: 0px;
+}
+
+.custom-social-text {
+  font-weight: 600;
+  padding: 0 !important;
+  color: #9A9AA0;
+}
+
+.custom-icon-social {
+  padding: 0 !important;
+}
+
