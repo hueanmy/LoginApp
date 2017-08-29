@@ -7,7 +7,7 @@ const passport          = require('passport');
 const flash             = require('connect-flash');
 const cookieParser      = require('cookie-parser');
 const nunjucks          = require('nunjucks');
-const router            = require('./app/http/router/router');
+const router            = require('./http/router/router');
 const path              = require('path');
 
 let app = express();

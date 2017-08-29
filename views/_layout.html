@@ -15,6 +15,7 @@
     {% if user %}
     <nav class="navbar transparent navbar-fixed-top">
         <ul class="nav navbar-nav navbar-right logout">
+            <li><a href="/profile" class="fullname_profile"><span>{{profile.fullname}}</span></a></li>
             <li><a href="/logout" class="logout-text"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
     </nav>
