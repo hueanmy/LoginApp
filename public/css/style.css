@@ -1,11 +1,11 @@
 body {
-    width:100px;
-    height:100px;
-    background: -webkit-linear-gradient(90deg, #16222A 10%, #3A6073 90%);
+    /*width:100px;
+    height:100px;*/
+    /*background: -webkit-linear-gradient(90deg, #16222A 10%, #3A6073 90%);
     background: -moz-linear-gradient(90deg, #16222A 10%, #3A6073 90%);
     background: -ms-linear-gradient(90deg, #16222A 10%, #3A6073 90%);
     background: -o-linear-gradient(90deg, #16222A 10%, #3A6073 90%);
-    background: linear-gradient(90deg, #16222A 10%, #3A6073 90%);
+    background: linear-gradient(90deg, #16222A 10%, #3A6073 90%);*/
     font-family: 'Raleway', sans-serif;
 }
 

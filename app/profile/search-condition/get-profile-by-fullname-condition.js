@@ -10,6 +10,15 @@ class GetProfileByFullnameCondition {
 	getParameter() {
 		return [`%${this.fullname}%`];
 	}
+
+	getKey() {
+		return 'fullname';
+	}
+
+	getValue() {
+		return this.fullname;
+	}
+
 }
 
 module.exports = GetProfileByFullnameCondition;

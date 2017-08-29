@@ -11,6 +11,14 @@ class GetProfileByUsernameCondition {
 	getParameter() {
 		return [`%${this.username}%`];
 	}
+
+	getKey() {
+		return 'username';
+	}
+
+	getValue() {
+		return this.username;
+	}
 }
 
 module.exports = GetProfileByUsernameCondition;

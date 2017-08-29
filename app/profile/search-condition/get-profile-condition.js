@@ -6,6 +6,15 @@ class GetBookCondition {
 	getParameter() {
 		return [];
 	}
+
+	getKey() {
+		return null;
+	}
+
+	getValue() {
+		return null;
+	}
+
 }
 
 module.exports = GetBookCondition;
