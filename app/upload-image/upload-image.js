@@ -18,6 +18,7 @@ module.exports = function (req, res, next) {
             next(err);
         }
         if (req.file){
+            req.flash('success_msg', 'Upload complete');
             res.json({
                 status: 'success',
                 link: `http://localhost:8000/image/${req.file.filename}`

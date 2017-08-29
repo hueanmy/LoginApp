@@ -58,6 +58,10 @@ small {
     color: #999;
 }
 
+.fullname_profile {
+    font-size: 15px;
+    color: #ffffff;
+}
 .logout-text {
     color: white;
 }

@@ -1,5 +1,3 @@
-const mysqlConnection = require('../../database/DBConnection');
-
 class Credential {
 
     constructor (username, password, provider, providerId) {

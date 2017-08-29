@@ -7,7 +7,7 @@ const passport          = require('passport');
 const flash             = require('connect-flash');
 const cookieParser      = require('cookie-parser');
 const nunjucks          = require('nunjucks');
-const router            = require('./app/http/router/router');
+const router            = require('./http/router/router');
 const path              = require('path');
 
 let app = express();
@@ -37,7 +37,7 @@ app.use(session({
 //passportjs
 app.use(passport.initialize());
 app.use(passport.session());
-require('./app/passport/config')(passport);
+require('./app/auth-service/config')(passport);
 
 //express-validator
 app.use(expressValidator({
