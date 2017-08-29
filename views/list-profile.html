@@ -47,7 +47,7 @@
 	{% for profile in profiles %}
 		<tr class="custom-list">
 			<td>{{ profile.id }}</td>
-			<td>{{ profile.username }}</td>
+			<td><a href="/profile">{{ profile.username }}</a></td>
 			<td>{{ profile.fullname }}</td>
 			<td>{{ profile.email }}</td>
 			<td>{{ profile.address }}</td>
