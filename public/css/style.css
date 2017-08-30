@@ -18,7 +18,13 @@ body {
 
 .text-login {
     text-align: center;
-    color: #ffffff;
+    color: #009688;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text-login:hover {
+  text-decoration: none;
 }
 
 .custom-input {
@@ -39,7 +45,13 @@ button.btn.btn-register {
 }
 
 button.btn.btn-register:hover {
-  background-color: #00BBAA !important;
+  border: 1px solid #009688;
+  background-color: #ffffff;
+}
+
+input.btn.btn-register:hover{
+  color: #05080A;
+  border: 1px solid #009688;
 }
 
 button.btn.btn-login:hover{
@@ -49,16 +61,17 @@ button.btn.btn-login:hover{
 
 button.btn.btn-login {
   border-radius: 0.5em;
-}
-
-.text-login {
-  font-weight: bold;
-  color: #009688;
+  border: 1px solid #009688;
 }
 
 .text-register {
   color: #ffffff;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.text-register:hover {
+  text-decoration: none;
 }
 
 .custom-facebook {
@@ -117,10 +130,16 @@ button.btn.btn-login {
 }
 
 button.btn.btn-block.btn-redirect-login {
-  border:0.1px #009688 inset ;
+  border: 1px solid #009688;
   border-radius: 0.5em;
   color: #ffffff;
 }
+
+button.btn.btn-block.btn-redirect-login a,
+button.btn.btn-block.btn-more a  {
+  text-decoration: none;
+}
+
 
 button.btn.btn-block.btn-more {
   background-color: #009688;
@@ -146,6 +165,7 @@ input.btn.btn-register {
   border-radius: 0.5em;
   margin-top: 20px;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .text-signup {
@@ -178,12 +198,11 @@ input.btn.btn-register {
   background-color: transparent !important;
 }
 
-.logout {
-  margin-right: 25px;
-  margin-top: 7px;
-  border-radius: 0.7px;
-}
  /*change profile*/
+
+.logout-text {
+    
+}
 
  .custom-upload {
     background-color: transparent;
