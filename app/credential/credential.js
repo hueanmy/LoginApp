@@ -13,20 +13,6 @@ class Credential {
         this.id = id;
         return this;
     }
-
-    create() {
-        let query = 'insert into credential set ?';
-        return new Promise((resolve, reject) => {
-            mysqlConnection.query(query, [this], (error, result) => {
-                if(error) {
-                    reject(error);
-                }
-                else {
-                    resolve(result);
-                }
-            })
-        })
-    }
 }
 
 module.exports = Credential;
