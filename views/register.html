@@ -4,13 +4,25 @@
 {% block content %}
 <div class="container">
   <div class="row centered-form">
-    <div class="col-md-6 col-md-offset-3 register-form">
+    <div class="row col-md-8 introduction-app">
+      <h3 class="text-introduction">Register to our application</h3>
+      <p class="col-md-10 col-md-offset-1 introduction">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere repellat dolorum nisi amet qui asperiores necessitatibus, quasi quis ipsam omnis voluptatum eveniet magni quaerat debitis, magnam. Natus aperiam sint tempora.</p>
+      <div class="row col-md-6 col-md-offset-3">
+        <div class="col-md-6">
+          <button class="btn btn-block btn-redirect-login"><a href="/login" class="text">Login</a></button>
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-block btn-more"><a href="#" class="text">Learn More</a></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 register-form">
       <h1 class="text-login">Welcome!</h1>
       <h4 class="text-signup">Please sign up</h4>
       <form role="form" action="/register" method="post" class="col-md-10 col-md-offset-1">
         <div class="form-group label-floating">
           <label class="control-label">FullName
-            <span class="req" style="color: red;">*</span>
+            <span class="req">*</span>
           </label>
           <div class="input-group custom-input">
             <input type="text" name="fullname" id="first_name" class="form-control input-sm">
@@ -19,7 +31,7 @@
 
         <div class="form-group label-floating">
           <label class="control-label">UserName
-            <span class="req" style="color: red;">*</span>
+            <span class="req">*</span>
           </label>
           <div class="input-group custom-input">
             <input type="text" name="username" id="user_name" class="form-control input-sm">
@@ -28,7 +40,7 @@
 
         <div class="form-group label-floating">
           <label class="control-label">Email
-            <span class="req" style="color: red;">*</span>
+            <span class="req">*</span>
           </label>
           <div class="input-group custom-input">
             <input type="email" name="email" id="email" class="form-control input-sm">
@@ -37,7 +49,7 @@
 
         <div class="form-group label-floating">
           <label class="control-label">Address
-            <span class="req" style="color: red;">*</span>
+            <span class="req">*</span>
           </label>
           <div class="input-group custom-input">
             <input type="text" name="address" id="address" class="form-control input-sm">
@@ -48,7 +60,7 @@
           <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group label-floating">
               <label class="control-label">Password
-                <span class="req" style="color: red;">*</span>
+                <span class="req">*</span>
               </label>
               <div class="input-group custom-input">
                 <input type="password" name="password" id="password" class="form-control input-sm">
@@ -58,7 +70,7 @@
           <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group label-floating">
               <label class="control-label">Confirm Password
-                <span class="req" style="color: red;">*</span>
+                <span class="req">*</span>
               </label>
               <div class="input-group custom-input">
                 <input type="password" name="password2" id="password_confirmation" class="form-control input-sm">
@@ -68,7 +80,7 @@
         </div>
 
         <div class="row">
-          <div class="col-md-4 col-md-push-4">
+          <div class="col-md-6 col-md-push-3">
             <input type="submit" value="Register" class="btn btn-register">
           </div>
         </div>

@@ -97,7 +97,7 @@ button.btn.btn-login {
 .custom-social-text {
   font-weight: 600;
   padding: 0 !important;
-  color: #9A9AA0;
+  color: #49494C;
 }
 
 .custom-icon-social {
@@ -116,8 +116,29 @@ button.btn.btn-login {
     border-radius: 5px;
 }
 
+button.btn.btn-block.btn-redirect-login {
+  border:0.1px #009688 inset ;
+  border-radius: 0.5em;
+  color: #ffffff;
+}
+
+button.btn.btn-block.btn-more {
+  background-color: #009688;
+  border-radius: 0.5em;
+}
+
 .req {
   color: red;
+}
+
+.text-introduction {
+  text-align: center;
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+p.col-md-10.col-md-offset-1.introduction {
+  color: #D3D3D3;
 }
 
 input.btn.btn-register {
@@ -130,6 +151,10 @@ input.btn.btn-register {
 .text-signup {
   text-align: center;
   font-weight: bold;
+}
+
+.introduction-app {
+  margin-top: 30vh;
 }
 
 /* style profile */
@@ -155,6 +180,8 @@ input.btn.btn-register {
 
 .logout {
   margin-right: 25px;
+  margin-top: 7px;
+  border-radius: 0.7px;
 }
  /*change profile*/
 
