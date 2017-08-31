@@ -11,6 +11,11 @@ module.exports = function(req, res, next) {
     let address   = req.body.address;
     let avatar    = req.body.avatar;
 
+    req.checkBody('fullname','fullname is required').notEmpty();
+    req.checkBody('username','username is required').notEmpty();
+    req.checkBody('address','address is required').notEmpty();
+    req.checkBody('email','email is required').isEmail();
+    req.checkBody('password','password is required').notEmpty();
     req.assert('password2', 'Password is not match').equals(req.body.password);
 
     req.getValidationResult().then((result) => {
