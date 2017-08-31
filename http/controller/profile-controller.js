@@ -30,15 +30,21 @@ function getEditProfile(req, res, next) {
 }
 
 function getProfiles(req, res, next) {
-	profileService.findByCondition(req.condition)
-		.then((profiles) => {
-			res.render('list-profile.html', {
-				profiles: profiles,
-				key: req.condition.getKey(),
-				value: req.condition.getValue()
-			});
-		})
-		.catch(next);	
+    profileService.findByCredentialId(req.user.id)
+		.then((profile) => {
+            profileService.findByCondition(req.condition)
+                .then((profiles) => {
+                    res.render('list-profile.html', {
+                    	profile:profile,
+                        profiles: profiles,
+                        key: req.condition.getKey(),
+                        value: req.condition.getValue()
+                    });
+                })
+                .catch(next);
+        })
+		.catch(next);
+
 }
 
 function getProfileById (req, res, next) {

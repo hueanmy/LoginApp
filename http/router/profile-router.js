@@ -9,7 +9,7 @@ let router = express.Router();
 router.get('/', ensureAuthenticate, profileController.getProfile);
 router.get('/edit', ensureAuthenticate, profileController.getEditProfile);
 router.post('/', updateProfileValidator, profileController.updateProfile);
-router.get('/list', conditionMiddleware, profileController.getProfiles);
-router.get('/:id', profileController.getProfileById);
+router.get('/list', ensureAuthenticate, conditionMiddleware, profileController.getProfiles);
+router.get('/:id', ensureAuthenticate, profileController.getProfileById);
 
 module.exports = router;
