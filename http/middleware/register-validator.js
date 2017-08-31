@@ -20,7 +20,7 @@ module.exports = function(req, res, next) {
                 errors: errors
             });
         } else {
-            req.credential = new Credential(username, password, null, null);
+            req.credential = new Credential(username, null, null).hashPassWord(password);
             req.profile = new Profile(username, fullname, email, address, avatar);
             next();
         }
