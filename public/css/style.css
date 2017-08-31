@@ -203,6 +203,7 @@ input.btn.btn-register {
  .custom-upload {
     background-color: transparent;
     color: #ffffff;
+    margin-top: 5px;
  }
 
 .text {
@@ -243,4 +244,9 @@ input.form-control.searchInput {
 
 thead.custom-thead {
     background-color: #009688;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
 }

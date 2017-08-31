@@ -8,6 +8,7 @@ module.exports = function(req, res, next) {
     let avatar = req.body.avatar;
 
     req.checkBody('fullname', 'FullName is required').notEmpty();
+    req.checkBody('address', 'Address is required').notEmpty();
     req.checkBody('email', 'Email is not valid').isEmail();
 
     req.getValidationResult().then((result) => {

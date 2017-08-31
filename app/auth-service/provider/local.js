@@ -1,5 +1,6 @@
 const DBConnection 	    = require('../../../database/DBConnection');
 const LocalStrategy 	= require('passport-local').Strategy;
+const bcrypt            = require('bcrypt');
 
 module.exports = new LocalStrategy(
     function(username, password, done) {
@@ -11,7 +12,7 @@ module.exports = new LocalStrategy(
                 return done(null, false, { message: 'Incorrect username.' });
             }
 
-            if (password !== result[0].password) {
+            if (!bcrypt.compareSync(password, result[0].password)) {
                 return done(null, false, { message: 'Incorrect password.' });
             }
             return done(null, result[0]);

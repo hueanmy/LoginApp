@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <link href="bootstrap/css/bootstrap-material-design.css" rel="stylesheet">
-    <link href="bootstrap/css/ripples.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap-material-design.css" rel="stylesheet">
+    <link href="/bootstrap/css/ripples.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container container-fluid">
     {% if user %}
     <nav class="navbar transparent navbar-fixed-top custom-nav">
         <ul class="nav navbar-nav navbar-right logout">
-            <li><i class="username logout-text"><span>{{profile.fullname}}</span></i></li>
+            <li><a href="/profile"><i class="username logout-text"><span>{{profile.fullname}}</span></i></a></li>
             <li><a href="/logout" class="logout-text">
                 <span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
         </ul>
@@ -38,8 +38,8 @@
 </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src='/js/index.js'></script>
-    <script src="bootstrap/js/material.js"></script>
-    <script src="bootstrap/js/ripples.min.js"></script>
+    <script src="/bootstrap/js/material.js"></script>
+    <script src="/bootstrap/js/ripples.min.js"></script>
     <script>
         $.material.init();
     </script>
