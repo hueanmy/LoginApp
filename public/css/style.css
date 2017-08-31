@@ -229,12 +229,20 @@ select.btn.searchSelect:hover {
     margin-top: 0;
 }
 
+label#uploadImage {
+    color: #ff5722;
+}
+
 button.btn.btn-default.searchButton{
     background-color: #9e9e9e;
 }
 
 button.btn.btn-default.searchButton:hover {
     background-color: #9e9e9e !important;
+}
+
+ul.nav.navbar-nav.navbar-right.logout {
+    margin-right: 0;
 }
 
 input.form-control.searchInput {
