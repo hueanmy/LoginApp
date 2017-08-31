@@ -17,7 +17,7 @@ module.exports = new TwitterStrategy(config.twitterAuth,
                     done(null, result[0]);
                 } else {
                     let credential = new Credential(null, null, profile.provider, profile.id);
-                    let profileUser = new Profile(null, profile.displayName, profile.emails[0].value, null, profile.photos[0].value);
+                    let profileUser = new Profile(null, profile.displayName, null, null, profile.photos[0].value);
                     let profileService = new ProfileService(DBConnection);
                     let query = "INSERT INTO credential SET ?";
                     DBConnection.query(query, [credential], (err, result) => {
