@@ -41,7 +41,18 @@ function getProfiles(req, res, next) {
 		.catch(next);	
 }
 
+function getProfileById (req, res, next) {
+	profileService.findByCredentialId(req.params.id)
+		.then((profile) => {
+			res.render('profile.html', {
+				profile: profile
+			});
+		})
+		.catch(next);	
+}
+
 exports.getProfile = getProfile;
 exports.updateProfile = updateProfile;
 exports.getEditProfile = getEditProfile;
 exports.getProfiles = getProfiles;
+exports.getProfileById = getProfileById;
