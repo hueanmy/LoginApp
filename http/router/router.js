@@ -18,14 +18,14 @@ router.post('/register', UserExisted, RegisterValidator, RegisterController.post
 router.get('/login', ensureUnauthenticate, LoginController.getLoginWithLocal);
 router.post('/login', LoginController.postLoginWithLocal);
 //facebook
-router.get('/auth/facebook', passport.authenticate('facebook', {scope: 'email'}));
-router.get('/auth/facebook/callback', LoginController.loginWithFacebook);
+router.get('/auth/facebook', LoginController.loginWithFacebook);
+router.get('/auth/facebook/callback', LoginController.loginWithFacebookCallback);
 //google
-router.get('/auth/google', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email'] }));
-router.get('/auth/google/callback', LoginController.loginWithGoogle);
+router.get('/auth/google', LoginController.loginWithGoogle);
+router.get('/auth/google/callback', LoginController.loginWithGoogleCallback);
 //twitter
-router.get('/auth/twitter', passport.authenticate('twitter'));
-router.get('/auth/twitter/callback', LoginController.loginWithTwitter);
+router.get('/auth/twitter', LoginController.loginWithTwitter);
+router.get('/auth/twitter/callback', LoginController.loginWithTwitterCallback);
 
 router.get('/logout', (req, res, next) => {
 	req.logout();
