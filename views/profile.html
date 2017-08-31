@@ -11,12 +11,17 @@
                         <img src="{{ profile.avatar }}" alt="" class="img img-rounded img-responsive" />
                     </div>
                     <div class="col-sm-6 col-md-8">
-                        <h3>{{ profile.fullname }}</h3>
+                        {% if otherProfile %}
+                            {% set tProfile = otherProfile %}
+                        {% else %}
+                            {% set tProfile = profile %}
+                        {% endif %}
+                        <h3>{{ tProfile.fullname }}</h3>
                         <p>
-                            <i class="fa fa-location-arrow custom-icon "></i>{{ profile.address}}
+                            <i class="fa fa-location-arrow custom-icon "></i>{{ tProfile.address}}
                         </p>
                         <p>
-                            <i class="glyphicon glyphicon-envelope custom-icon"></i>{{ profile.email }}
+                            <i class="glyphicon glyphicon-envelope custom-icon"></i>{{ tProfile.email }}
                         </p>
 
                         <br>
@@ -24,7 +29,9 @@
 
                         <div class="row col-md-8 col-md-offset-2">
                             <div class="col-md-3">
+                                {% if (not otherProfile) or (tProfile.id == profile.id) %}
                                 <a href="/profile/edit"><button class="btn btn-change">Edit Profile</button></a>
+                                {% endif %}
                             </div>
 
                             <div class="col-md-4"></div>
