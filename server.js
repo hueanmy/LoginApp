@@ -68,6 +68,6 @@ app.use((req, res, next) => {
 
 app.use(router);
 
-app.listen(8000, () => {
-   console.log('server at port 8000');
+app.listen(process.env.SERVER_PORT, () => {
+   console.log(`server at port ${process.env.SERVER_PORT}`);
 });
