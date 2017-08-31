@@ -112,6 +112,11 @@ a.text.btn.btn-block.btn-register {
   color: #1DA1F2;
 }
 
+button.btn.btn-change {
+    color: #009866;
+    font-weight: bold;
+}
+
 .custom-google {
   font-size: 25px;
   color: #DF4B37;
@@ -204,6 +209,38 @@ input.btn.btn-register {
   margin-top: 4.5vh;
 }
 
+hr {
+    margin-bottom: 0;
+}
+
+select.btn.searchSelect {
+    background-color: #9e9e9e;
+}
+
+select.btn.searchSelect:hover {
+    background-color: #9e9e9e !important;
+}
+
+.searchInput {
+    background-color: #ffffff;
+}
+
+.form-group.is-empty {
+    margin-top: 0;
+}
+
+button.btn.btn-default.searchButton{
+    background-color: #9e9e9e;
+}
+
+button.btn.btn-default.searchButton:hover {
+    background-color: #9e9e9e !important;
+}
+
+input.form-control.searchInput {
+    color: #ffffff;
+}
+
 .custom-icon {
   padding-right: 10px;
 }
@@ -212,6 +249,7 @@ input.btn.btn-register {
 
 .custom-nav {
   background-color: transparent !important;
+    margin-bottom: 0;
 }
 
  /*change profile*/
