@@ -2,10 +2,11 @@ const bcrypt = require('bcrypt');
 
 class Credential {
 
-    constructor (username, provider, providerId) {
+    constructor (username, password, provider, providerId) {
         this.username    = username;
         this.provider    = provider;
         this.providerId  = providerId;
+        this.password = password;
     }
 
     setId (id) {
