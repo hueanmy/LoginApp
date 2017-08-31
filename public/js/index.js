@@ -12,8 +12,7 @@ $(document).ready(() => {
     $('#inputImage').change((e) => {
         let formData = new FormData();
         formData.append('avatar', e.target.files[0]);
-        var ValidImageTypes = ["image/gif", "image/jpeg", "image/png"];
-        console.log($.inArray(e.target.files[0].type, ValidImageTypes));
+        let ValidImageTypes = ["image/gif", "image/jpeg", "image/png"];
 
         if ($.inArray(e.target.files[0].type, ValidImageTypes) >= 0) {
             $.ajax({
@@ -23,7 +22,7 @@ $(document).ready(() => {
                 processData: false,
                 contentType: false,
                 success: (result) => {
-                    if (result.status == 'success') {
+                    if (result.status === 'success') {
                         $('.avatar').attr('src', result.link);
                         $("[name='avatar']").val(result.link);
                     }
