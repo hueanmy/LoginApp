@@ -225,16 +225,20 @@ select.btn.searchSelect:hover {
     background-color: #ffffff;
 }
 
-.form-group.is-empty {
-    margin-top: 0;
-}
-
 label#uploadImage {
     color: #ff5722;
 }
 
+i.username.logout-text {
+    color: #ffffff;
+}
+
 button.btn.btn-default.searchButton{
     background-color: #9e9e9e;
+}
+
+.form-group.custom-form-group {
+    margin: 0;
 }
 
 button.btn.btn-default.searchButton:hover {
